@@ -27,7 +27,7 @@
     unsure: "I'd like advice"
   };
   function getEnquiry() {
-    const subject = "Website enquiry" + (business.value.trim() ? " — " + business.value.trim() : "");
+    const subject = "Website enquiry" + (business.value.trim() ? " | " + business.value.trim() : "");
     const body = [
       "Hello Allerton Digital,",
       "",

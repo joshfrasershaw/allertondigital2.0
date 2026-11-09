@@ -1,4 +1,4 @@
-/* Allerton Digital 2.0 — progressively enhanced, accessible interactions */
+/* Allerton Digital 2.0: progressively enhanced, accessible interactions */
 (() => {
   "use strict";
 
