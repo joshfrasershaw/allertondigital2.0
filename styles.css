@@ -345,3 +345,14 @@ p { line-height: 1.58; }
   html { scroll-behavior:auto; }
   *, *::before, *::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
 }
+
+/* Approved website concepts: show the actual design screenshots, not fabricated website overlays. */
+.concept-card.concept-screenshot { background: #f4f5ff; }
+.concept-screenshot .concept-image { width: 100%; height: 100%; inset: 0; left: 0; object-fit: cover; object-position: center top; filter: none; }
+.concept-screenshot .concept-art { background: #fff; }
+/* The gallery crops at the fold; the full design remains readable in the scrollable preview. */
+.dialog-preview:has(.concept-screenshot),
+.dialog-preview:has(.concept-art > .concept-image) { height: auto; max-height: 65svh; overflow: auto; background: #fff; }
+.dialog-preview .concept-art { position: static; overflow: visible; }
+.dialog-preview .concept-image { position: static; display: block; width: 100%; height: auto; max-width: 100%; object-fit: contain; object-position: center top; filter: none; }
+.showcase-property img, .showcase-hospitality img { object-position: top center; }

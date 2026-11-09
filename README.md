@@ -21,10 +21,14 @@ Visit `http://localhost:8080`.
 
 ## Notes
 
-- The five gallery entries are **design concepts**, not commissioned customer work. This is stated on the page.
+- The seven gallery entries are **design concepts**, not commissioned customer work. This is stated on the page.
 - Portfolio photography is currently sourced from Unsplash URLs; replace with exported, licensed, approved Allerton concept assets before production.
 - The interface uses a Helios-first font stack with a web-safe / DM Sans fallback. Add your licensed Helios files if you want pixel-perfect typography.
 - Enquiries use the public address `hello@allertondigital.co.uk` via mailto links.
 - This repository does not publish or deploy itself.
 
 © 2026 Allerton Digital.
+
+## Approved concept screenshots
+
+The homepage carousel uses the seven locally stored WebP screenshots in the repository root: `hollis-ward.webp`, `chispa.webp`, `heating-ac.webp`, `refined-auto.webp`, `goodground.webp`, `studio-eclat.webp`, and `two-places.webp`. These are illustrative design concepts, not commissioned client websites. The gallery supports arrows, swipe, keyboard navigation and full-image previews.

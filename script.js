@@ -102,7 +102,7 @@
     card.addEventListener("click", event => {
       if (dragging) return;
       if (i !== current) { setConcept(i); return; }
-      if (event.target.closest(".concept-open")) showConcept(i);
+      showConcept(i);
     });
     card.querySelector(".concept-open")?.addEventListener("keydown", event => {
       if (event.key === "Enter" || event.key === " ") {
