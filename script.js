@@ -95,6 +95,8 @@
     document.getElementById("dialog-description").textContent = card.dataset.description || "";
     preview.replaceChildren(card.querySelector(".concept-art").cloneNode(true));
     preview.querySelectorAll("img").forEach(img => { img.loading = "eager"; });
+    const conceptEnquiry = dialog.querySelector(".dialog-bottom a");
+    if (conceptEnquiry) conceptEnquiry.href = "./contact.html?service=website&concept=" + encodeURIComponent(card.dataset.title || "");
     dialog.showModal();
     closeDialog?.focus();
   }
@@ -189,7 +191,7 @@
       arrow.setAttribute("aria-hidden", "true");
       arrow.textContent = "↗";
       industryLink.append(arrow);
-      industryLink.href = "mailto:hello@allertondigital.co.uk?subject=" + encodeURIComponent(details.subject);
+      industryLink.href = "./contact.html?service=website&industry=" + encodeURIComponent(button.dataset.industry);
     });
   });
 
