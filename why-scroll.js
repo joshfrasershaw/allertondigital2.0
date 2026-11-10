@@ -20,8 +20,6 @@
     // Settle on the final scene before the navy CTA transition begins.
     const active = Math.min(scenes.length - 1, progress * (scenes.length - 0.7));
     const outroProgress = clamp((progress - 0.87) / 0.13);
-    const progressLabel = stage.querySelector(".why-pin-navigation-label");
-    if (progressLabel) progressLabel.textContent = String(Math.min(scenes.length, Math.round(active) + 1)).padStart(2, "0") + " / " + String(scenes.length).padStart(2, "0");
     scenes.forEach((scene, i) => {
       scene.style.transform = "translate3d(0," + ((i - active) * 100) + "%,0)";
       scene.inert = Math.abs(i - active) > 0.6;
