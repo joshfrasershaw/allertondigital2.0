@@ -769,17 +769,35 @@ html.why-pinned .why-scene-media { max-width:540px; }
 }
 
 
-/* Three genuine concept screenshots, one for each pinned reason. */
+
+/* Shared screenshot presentation: full browser width, equal viewport proportions, no overlays. */
 .why-scene-media-screenshot { padding-bottom:0; max-width:580px; }
-.why-single-concept { position:relative; width:100%; margin:0; overflow:hidden; border:1px solid #b5c6ec; border-radius:19px; background:#fff; box-shadow:0 22px 48px -28px rgba(6,25,85,.42); }
-.why-single-concept img { display:block; width:100%; height:clamp(300px,31vw,430px); object-fit:cover; object-position:center top; }
-.why-single-concept figcaption { position:absolute; left:15px; bottom:15px; display:flex; flex-direction:column; gap:2px; max-width:calc(100% - 30px); padding:9px 14px; border-radius:12px; background:rgba(255,255,255,.97); color:var(--ink); font-size:14px; line-height:1.2; font-weight:750; box-shadow:0 4px 16px rgba(4,24,78,.15); }
-.why-single-concept figcaption span { font-size:10px; color:#556fa6; font-weight:550; }
-.why-inline-evidence { margin:20px 0 0!important; padding-top:16px; border-top:1px solid #b5c7ed; color:#35518c; font-size:13px!important; line-height:1.55!important; }
-.why-inline-evidence strong { display:inline; margin-right:5px; font-size:15px; color:var(--ink); }
+.why-single-concept { width:100%; margin:0; color:var(--ink); }
+.why-single-concept-viewport { width:100%; aspect-ratio:1.92 / 1; overflow:hidden; border:1px solid #b5c6ec; border-radius:17px; background:#f9fbff; box-shadow:0 22px 48px -28px rgba(6,25,85,.42); }
+.why-single-concept-viewport img { display:block; width:100%; height:auto; max-width:none; }
+.why-single-concept figcaption { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; column-gap:12px; row-gap:3px; margin:12px 1px 0; color:var(--ink); font-size:13px; font-weight:750; line-height:1.45; }
+.why-single-concept figcaption span { color:#526b9f; font-size:12px; font-weight:500; }
+.why-scene-copy h3,html.why-pinned .why-scene-copy h3 { font-size:clamp(2.8rem,4.1vw,4.55rem); font-weight:750; letter-spacing:-.055em; line-height:1.06; margin-bottom:23px; text-wrap:pretty; }
+.why-scene-copy .why-scene-lead,html.why-pinned .why-scene-copy .why-scene-lead { font-size:clamp(1.4rem,1.9vw,2rem); font-weight:700; line-height:1.25; margin-bottom:18px; }
+.why-scene-copy > p:not(.why-scene-lead) { margin:0; max-width:480px; font-size:16px; line-height:1.65; color:#344f89; }
+.why-scene-copy .why-inline-evidence,html.why-pinned .why-scene-copy .why-inline-evidence { margin:19px 0 0!important; padding-top:16px; border-top:1px solid #b5c7ed; font-size:13px!important; line-height:1.55!important; color:#35518c; }
+.why-inline-evidence strong { display:inline; margin-right:5px; font-size:15px; color:var(--ink); font-weight:750; }
 .why-inline-evidence a { display:block; width:max-content; max-width:100%; margin-top:7px; font-size:12px; font-weight:750; color:var(--cobalt); text-decoration:underline; text-underline-offset:3px; }
 .why-inline-evidence a:hover { color:#c41b74; }
 html.why-pinned .why-scene-media-screenshot { max-width:555px; }
-html.why-pinned .why-single-concept img { height:clamp(235px,44svh,380px); }
-@media (max-width:800px) { .why-scene-media-screenshot { padding-bottom:0; } .why-single-concept img { height:clamp(260px,66vw,440px); } }
-@media (max-width:480px) { .why-single-concept { border-radius:13px; } .why-single-concept img { height:clamp(230px,67vw,360px); } .why-single-concept figcaption { left:10px; bottom:10px; padding:7px 10px; font-size:12px; } }
+@media (max-width:800px) {
+  .why-scene-media-screenshot { padding-bottom:0; }
+  .why-scene-copy h3 { font-size:clamp(2.7rem,7.8vw,4rem); }
+  .why-single-concept figcaption { margin-top:10px; }
+}
+@media (max-width:480px) {
+  .why-single-concept-viewport { border-radius:12px; }
+  .why-single-concept figcaption { font-size:12px; }
+  .why-single-concept figcaption span { font-size:11px; }
+}
+@media (max-height:760px) and (min-width:960px) {
+  html.why-pinned .why-scene-copy h3 { font-size:clamp(2.55rem,3.8vw,4rem); margin-bottom:15px; }
+  html.why-pinned .why-scene-copy .why-scene-lead { font-size:clamp(1.3rem,1.75vw,1.8rem); margin-bottom:13px; }
+  html.why-pinned .why-scene-copy > p:not(.why-scene-lead) { font-size:14px; }
+  html.why-pinned .why-scene-copy .why-inline-evidence { margin-top:12px!important; padding-top:10px; }
+}

@@ -18,6 +18,8 @@
     const scrollDistance = Math.max(1, track.offsetHeight - window.innerHeight);
     const progress = clamp(-track.getBoundingClientRect().top / scrollDistance);
     const active = progress * (scenes.length - 1);
+    const progressLabel = stage.querySelector(".why-pin-navigation-label");
+    if (progressLabel) progressLabel.textContent = String(Math.min(scenes.length, Math.round(active) + 1)).padStart(2, "0") + " / " + String(scenes.length).padStart(2, "0");
     scenes.forEach((scene, i) => {
       scene.style.transform = "translate3d(0," + ((i - active) * 100) + "%,0)";
       scene.inert = Math.abs(i - active) > 0.6;
